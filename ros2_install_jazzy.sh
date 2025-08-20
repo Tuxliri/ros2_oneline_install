@@ -178,7 +178,7 @@ echo ">>> {Step 6: Setting ROS Environment, This will add ROS environment to .ba
 echo ">>> { After adding this, you can able to access ROS commands in terminal}"
 echo ""
 echo "source /opt/ros/${name_ros_distro}/setup.bash" >> /home/$user_name/.bashrc
-source /home/$user_name/.bashrc
+( set +u; source /home/$user_name/.bashrc )
 echo ""
 echo "#######################################################################################################################"
 echo ">>> {Step 7: Testing ROS installation, checking ROS version.}"
