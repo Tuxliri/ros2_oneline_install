@@ -131,7 +131,7 @@ if [ "${NONINTERACTIVE:-}" = "1" ]; then
 else
   # Interactive mode: ask user, fallback to default on empty input
   read -r -p "Enter your install (Default is ${DEFAULT_CHOICE}) [1/2/3]: " answer
-  answer="${answer:-$DEFAULT_CHOICE}"
+  answer="${ROS_INSTALL_CHOICE:-$DEFAULT_CHOICE}"
 fi
 
 # Normalize/validate
