@@ -133,7 +133,7 @@ echo ""
 echo "     [3. ROS-Base: (Bare Bones) ROS packaging, build, and communication libraries. No GUI tools.]"
 echo ""
 # --- Configurable default ---
-DEFAULT_CHOICE=1     # 1=desktop-full, 2=ros-base
+DEFAULT_CHOICE=1
 
 if [ "${NONINTERACTIVE:-}" = "1" ]; then
   # Non-interactive: take env var or fallback to default
@@ -142,7 +142,7 @@ if [ "${NONINTERACTIVE:-}" = "1" ]; then
 else
   # Interactive mode: ask user, fallback to default on empty input
   read -r -p "Enter your install (Default is ${DEFAULT_CHOICE}) [1/2]: " answer
-  answer="${answer:-$DEFAULT_CHOICE}"
+  answer="${ROS_INSTALL_CHOICE:-$DEFAULT_CHOICE}"
 fi
 
 # Normalize/validate
