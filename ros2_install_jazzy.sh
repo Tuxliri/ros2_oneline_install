@@ -163,8 +163,8 @@ case "$answer" in
     else
       package_type="ros-base"
     fi
-;;
-
+    ;;
+esac
 echo "#######################################################################################################################"
 echo ""
 echo ">>>  {Starting ROS installation, this will take about 20 min. It will depends on your internet  connection}"

@@ -151,7 +151,7 @@ case "$answer" in
     else
       package_type="ros-base"
     fi
-;;
+    ;;
 esac
 echo "#######################################################################################################################"
 echo ">>> {Step 6: Setting ROS Environment, This will add ROS environment to .bashrc.}" 
